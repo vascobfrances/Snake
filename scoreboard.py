@@ -1,18 +1,15 @@
-import turtle
 from turtle import Turtle
+
 ALIGNMENT = "center"
-FONT = ("Arial",24, "normal")
-
-
-
+FONT = ("Arial", 24, "normal")
 
 
 class Scoreboard(Turtle):
 
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Turtle().__init__()
         self.score = 0
-        #self.high_score = 0
+        # self.high_score = 0
         with open("data.txt", mode="r") as file:
             self.high_score = int(file.read())
         self.color("white")
@@ -36,14 +33,3 @@ class Scoreboard(Turtle):
     def increase_score(self):
         self.score += 1
         self.update_scoreboard()
-
-
-
-
-
-
-
-
-
-
-
